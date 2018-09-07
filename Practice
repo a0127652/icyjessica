@@ -1,0 +1,17 @@
+Practice S02P01: Speed of Sound
+http://www.comp.nus.edu.sg/~cs1010/4_misc/practice.html
+Reference: Unit 5
+Week of release: Week 4
+Objectives: Writing function, using math function
+Task statement:
+Write a program speedOfSound.c that calculates the speed of sound s in air of a given
+temperature T (in degree Fahrenheit). Formula to compute the speed s in feet/sec:
+𝑠 = 1086 √
+5𝑇 + 297
+247
+All values are of type float.
+Your program should contain a function speed_of_sound() to compute and return the speed.
+You are to decide on its parameter(s).
+Sample run:
+Temperature in degree Fahrenheit: 95.8
+Speed of sound in air of 95.80 degree = 1924.92 ft/sec
