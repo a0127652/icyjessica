@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+        long a;
+        long *a_ptr;
+        double b;
+        double *b_ptr;
+/**read positive integer a and b*/
+        scanf("%ld", &a);
+        scanf("%le", &b);
+/**store address of a and b in pointer*/
+        a_ptr = &a;
+        b_ptr = &b;
+/** check if a < b*b is true*/
+        while(*a_ptr < (*b_ptr * *b_ptr)){
+/**if yes, calculate a*b and return value to a*/
+                *a_ptr = *a_ptr * *b_ptr;
+        }
+        printf("%ld\n", a);
+
+        return 0;
+}
