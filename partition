@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+/**function to print the array*/
+void printArray(long array[], long size) {
+        long i;
+
+        for  (i = 0; i < size; i += 1) {
+                printf("%ld", array[i]);
+                printf("\n");
+        }
+}
+/**swich value positions to left or right depending on value and pivot*/
+void partition(long array[], long size, long pivot) {
+        long i;
+        long temp;
+        long m;
+
+        for (i = 0; i < size; i += 1) {
+                for (m = 0; m < size; m += 1) {
+                        if (array[m] > pivot) {
+                                temp = array[m];
+                                array[m] = array[i];
+                                array[i] = temp;
+                        }
+                }
+        }
+}
+
+
+int main(void) {
+        long i;
+        long size;
+        long array[255];
+        long pivot;
+/**input the size of array*/
+        scanf("%ld", &size);
+/**inpur array elements*/
+        for (i = 0; i < size; i += 1){
+                scanf("%ld", &array[i]);
+        }
+/**input pivot value*/
+        scanf("%ld", &pivot);
+
+        partition(array, size, pivot);
+        printArray(array, size);
+
+        return 0;
